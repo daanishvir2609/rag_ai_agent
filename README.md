@@ -238,20 +238,6 @@ Downgrade to Python 3.11 or 3.12. Python 3.14 has compatibility issues with some
 
 ---
 
-## Key concepts explained simply
-
-**RAG (Retrieval Augmented Generation)** — Instead of asking the AI to guess from memory, we first search our own database for relevant reviews, then give those reviews to the AI as context. The AI reads the actual reviews and bases its answer on them. This is why the agent can give specific statistics and quotes rather than making things up.
-
-**Vector search** — Each review is converted into a list of ~1000 numbers (called a vector) that mathematically represents its meaning. When you ask a question, your question is also converted to numbers, and the database finds reviews whose numbers are closest — meaning most similar in topic and sentiment. This is why searching "terrible experience" finds reviews saying "awful" or "worst ever" even though the words are different.
-
-**MCP (Model Context Protocol)** — A standard protocol for connecting AI models to tools. The tools live in `server.py` as a separate process. The agent connects over HTTP and asks "what tools do you have?" The server responds with the list. This means the tools are reusable — any MCP-compatible AI (Claude Desktop, Cursor, etc.) could connect to the same server.
-
-**AI Agent** — Unlike a simple chatbot that just generates text, an agent can decide what actions to take. When you ask a question, the LLM reasons about which tool to call, calls it, reads the result, and decides if it needs more information before answering. The AI controls the flow, not the code.
-
-**Local LLM via Ollama** — The AI model (LLaMA 3.1) runs entirely on your machine. No data is sent anywhere. No API key required. No cost per query.
-
----
-
 ## Technology stack
 
 | Component | Technology | Purpose |
@@ -263,14 +249,3 @@ Downgrade to Python 3.11 or 3.12. Python 3.14 has compatibility issues with some
 | Tool Protocol | MCP (FastMCP) | Exposing tools as a server |
 | LLM Integration | LangChain | Connecting all components |
 | Language | Python 3.11/3.12 | Everything |
-
-EOF
-Output
-exit code 0
-Done
-
-You are out of free messages until 1:40 PM
-Keep working
-
-
-Claude is AI and ca
