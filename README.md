@@ -1,4 +1,3 @@
-cat > /mnt/user-data/outputs/README.md << 'EOF'
 # Restaurant Review AI Agent
 
 A fully local AI agent that answers questions about restaurant reviews using RAG (Retrieval Augmented Generation) and MCP (Model Context Protocol). Everything runs on your own machine — no paid APIs, no internet connection required after setup.
